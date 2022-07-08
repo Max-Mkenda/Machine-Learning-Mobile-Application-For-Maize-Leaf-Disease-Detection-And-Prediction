@@ -1,0 +1,17 @@
+{
+    "UserAgent": "aws-amplify-cli/2.0",
+    "Version": "1.0",
+    "api": {
+        "plugins": {
+            "awsAPIPlugin": {
+                "serverless-inference-api-graphql-api": {
+                    "endpointType": "GraphQL",
+                    "endpoint": "https://cevfsi6n7nb3bex43ly36anp3a.appsync-api.eu-west-1.amazonaws.com/graphql",
+                    "region": "eu-west-1",
+                    "authorizationType": "API_KEY",
+                    "apiKey": "da2-gjlicfd7d5falm434eq4d7swt4"
+                }
+            }
+        }
+    }
+}

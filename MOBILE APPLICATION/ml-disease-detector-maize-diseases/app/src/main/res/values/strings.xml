@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Plant Diseases</string>
+    <string name="welcome">Hi, \nEvery good harvest start with good weather.</string>
+    <string name="home">Home</string>
+
+    <string name="camera">Camera</string>
+    <string name="diagnose">Library</string>
+    <string name="camera_capture">Camera Capture</string>
+    <string name="prediction_results">Prediction Results</string>
+    <string name="back">Back</string>
+    <string name="more_details">More Details</string>
+    <string name="predict_desc">You can get Condition of your plants condition by taking a picture of it</string>
+    <string name="take_photo">TAKE PHOTO</string>
+    <string name="rotten_message">Your picture Looks it have a Rotten Mango/Fruit or something similar</string>
+    <string name="fresh_message">Your picture Looks it have a Fresh Mango/Fruit or something similar</string>
+    <string name="hint">* This is prediction, we have very confidence with images we used to learn, but the model still need more sessions and data to learn</string>
+    <string name="prop">(%) prop</string>
+    <string name="more">More Services</string>
+    <string name="mangoes_species">Mangoes Species Identification</string>
+    <string name="mangoes_varieties">What is the mangoes varieties you are farming</string>
+    <string name="plant_diseases">Plant Diseases Detection</string>
+    <string name="diseases_desc">Are there and Disease in my plands</string>
+    <string name="diseases_by_pathogens">Library</string>
+    <string name="pathogen">Fungus</string>
+    <string name="diseases">Diseases</string>
+    <string name="chemicalControl">ChemicalControl</string>
+    <string name="organic_control">Organic Control</string>
+    <string name="triggers">Triggers</string>
+    <string name="hosts">Hosts</string>
+    <string name="measures">Measures</string>
+    <string name="wind">wind</string>
+    <string name="humidity">Humidity</string>
+    <string name="precip">Precip</string>
+    <string name="temperature_symbol">℃</string>
+    <string name="labs">Diseases Library</string>
+    <string name="lab_desc">We have extensive library for different diseases, you can learn from.</string>
+
+</resources>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@+id/takeCamera"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/profile_navigation_graph">
+
+
+    <fragment
+        android:id="@+id/takeCamera"
+        android:label="Account Settings"
+        android:name="fragments.Inference.ImageCapture"
+        tools:layout="@layout/take_picture_fragment">
+        <action
+            android:id="@+id/toInferenceResults"
+            app:destination="@id/inferenceResults"
+       />
+    </fragment>
+
+    <fragment
+        android:id="@+id/inferenceResults"
+        android:label="Share and Invite"
+        android:name="fragments.Inference.Prediction"
+        tools:layout="@layout/prediction_fragment">
+
+        <action
+            android:id="@+id/toDiseaseMeasures"
+            app:destination="@id/diseaseMeasures"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/diseaseMeasures"
+        android:label="Share and Invite"
+        android:name="fragments.diagnose.DiseaseDetails"
+        tools:layout="@layout/disease_details">
+    </fragment>
+
+</navigation>

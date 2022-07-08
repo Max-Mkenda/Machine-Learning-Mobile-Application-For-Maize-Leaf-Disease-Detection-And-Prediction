@@ -1,0 +1,43 @@
+# this is an auto generated file. This will be overwritten
+mutation CreateItem($input: createItemInput!) {
+  createItem(input: $input) {
+    disease
+    organicControl
+    chemicalControl
+    hosts
+    pathogen
+    symptoms
+    trigger
+    image
+    summary
+    measures
+  }
+}
+mutation UpdateItem($input: updateItemInput!) {
+  updateItem(input: $input) {
+    disease
+    organicControl
+    chemicalControl
+    hosts
+    pathogen
+    symptoms
+    trigger
+    image
+    summary
+    measures
+  }
+}
+mutation DeleteItem($input: deleteItemInput!) {
+  deleteItem(input: $input) {
+    disease
+    organicControl
+    chemicalControl
+    hosts
+    pathogen
+    symptoms
+    trigger
+    image
+    summary
+    measures
+  }
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="toolbarHeight">48dp</dimen>
+
+    <dimen name="marginNormal">8dp</dimen>
+    <dimen name="marginSmall">4dp</dimen>
+
+    <dimen name="iconSmall">8dp</dimen>
+    <dimen name="iconNormal">24dp</dimen>
+
+    <dimen name="textSmall">8sp</dimen>
+    <dimen name="textNormal">12sp</dimen>
+    <dimen name="textTitle">18sp</dimen>
+    <dimen name="header">24sp</dimen>
+    <dimen name="confidence">48sp</dimen>
+
+    <dimen name="imageWidth">160dp</dimen>
+    <dimen name="imageBig">280dp</dimen>
+</resources>

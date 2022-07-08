@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/diseasesList"
+    android:id="@+id/diagnose">
+
+    <fragment
+        android:id="@+id/diseasesList"
+        android:label="Share and Invite"
+        android:name="fragments.diagnose.DiseasesList"
+        tools:layout="@layout/diseases_list">
+
+        <action
+            android:id="@+id/toDiseaseDetails"
+            app:destination="@id/diseaseDetails"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/diseaseDetails"
+        android:label="Share and Invite"
+        android:name="fragments.diagnose.DiseaseDetails"
+        tools:layout="@layout/disease_details">
+    </fragment>
+
+</navigation>

@@ -1,0 +1,16 @@
+{
+    "UserAgent": "aws-amplify-cli/0.1.0",
+    "Version": "0.1.0",
+    "IdentityManager": {
+        "Default": {}
+    },
+    "AppSync": {
+        "Default": {
+            "ApiUrl": "https://cevfsi6n7nb3bex43ly36anp3a.appsync-api.eu-west-1.amazonaws.com/graphql",
+            "Region": "eu-west-1",
+            "AuthMode": "API_KEY",
+            "ApiKey": "da2-gjlicfd7d5falm434eq4d7swt4",
+            "ClientDatabasePrefix": "serverless-inference-api-graphql-api_API_KEY"
+        }
+    }
+}

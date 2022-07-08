@@ -1,0 +1,43 @@
+# this is an auto generated file. This will be overwritten
+subscription OncreateItem($disease: ID) {
+  oncreateItem(disease: $disease) {
+    disease
+    organicControl
+    chemicalControl
+    hosts
+    pathogen
+    symptoms
+    trigger
+    image
+    summary
+    measures
+  }
+}
+subscription OnupdateItem($disease: ID) {
+  onupdateItem(disease: $disease) {
+    disease
+    organicControl
+    chemicalControl
+    hosts
+    pathogen
+    symptoms
+    trigger
+    image
+    summary
+    measures
+  }
+}
+subscription OndeleteItem($disease: ID) {
+  ondeleteItem(disease: $disease) {
+    disease
+    organicControl
+    chemicalControl
+    hosts
+    pathogen
+    symptoms
+    trigger
+    image
+    summary
+    measures
+  }
+}

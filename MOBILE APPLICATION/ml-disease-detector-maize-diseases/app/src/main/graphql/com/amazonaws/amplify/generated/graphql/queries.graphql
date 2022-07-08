@@ -1,0 +1,36 @@
+# this is an auto generated file. This will be overwritten
+query GetItem($disease: ID!) {
+  getItem(disease: $disease) {
+    disease
+    organicControl
+    chemicalControl
+    hosts
+    pathogen
+    symptoms
+    trigger
+    image
+    summary
+    measures
+  }
+}
+query ListItems(
+  $filter: TableDiseaseFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listItems(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      disease
+      organicControl
+      chemicalControl
+      hosts
+      pathogen
+      symptoms
+      trigger
+      image
+      summary
+      measures
+    }
+    nextToken
+  }
+}

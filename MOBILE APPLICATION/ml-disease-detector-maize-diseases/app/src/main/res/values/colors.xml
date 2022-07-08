@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="redSecondary">#50C878</color>
+    <color name="colorPrimary">@color/earthgreen</color>
+    <color name="mint">#3EB489</color>
+    <color name="red">#dc3545</color>
+
+    <color name="transparentWhite">#40FFFFFF</color>
+    <color name="transparent">#40000000</color>
+
+    <color name="transparentAll">#00000000</color>
+    <color name="backgroundColor">#F2F5F7</color>
+
+    <color name="earthgreen">#34A56F</color>
+
+    <color name="gray">#EAEAEA</color>
+
+    <color name="white">#FFF</color>
+    <color name="black">#000</color>
+</resources>

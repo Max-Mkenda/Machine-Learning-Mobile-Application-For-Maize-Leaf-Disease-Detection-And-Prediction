@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:padding="@dimen/marginNormal"
+        android:id="@+id/homeHeader"
+        android:text="@string/welcome"
+        android:textSize="@dimen/header"
+        android:textColor="@color/black"
+        android:layout_marginTop="24dp"
+        android:fontFamily="sans-serif-black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="@dimen/marginNormal"
+        app:cardBackgroundColor="@color/white"
+        app:cardElevation="0dp"
+        android:layout_marginTop="@dimen/marginNormal"
+        android:id="@+id/weatherCard"
+        android:padding="@dimen/marginNormal"
+        android:layout_marginStart="@dimen/marginNormal"
+        android:layout_marginEnd="@dimen/marginNormal"
+
+        app:layout_constraintTop_toBottomOf="@+id/homeHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:padding="@dimen/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                app:layout_constraintBottom_toTopOf="@+id/icon"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:id="@+id/temperature"
+                android:layout_width="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/black"
+                android:layout_marginStart="@dimen/marginSmall"
+                android:textSize="@dimen/confidence"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                app:layout_constraintTop_toTopOf="@id/temperature"
+                app:layout_constraintStart_toEndOf="@id/temperature"
+                android:id="@+id/temperatureIcon"
+                android:layout_width="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/temperature_symbol"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textTitle"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/temperature"
+                app:layout_constraintStart_toStartOf="parent"
+                android:id="@+id/icon"
+                android:layout_margin="@dimen/marginSmall"
+                android:layout_width="96dp"
+                android:layout_height="96dp" />
+
+            <TextView
+                app:layout_constraintTop_toBottomOf="@+id/icon"
+                android:textAllCaps="true"
+                android:id="@+id/summary"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="@dimen/marginNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+
+
+            <TextView
+                app:layout_constraintStart_toEndOf="@+id/guideline"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="wrap_content"
+                android:text="@string/wind"
+                android:id="@+id/windHeader"
+                android:fontFamily="sans-serif-medium"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                app:layout_constraintStart_toEndOf="@+id/windHeader"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="@dimen/marginNormal"
+                android:layout_width="wrap_content"
+                android:id="@+id/windValue"
+                android:textAllCaps="true"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                app:layout_constraintStart_toEndOf="@+id/guideline"
+                app:layout_constraintTop_toBottomOf="@+id/windHeader"
+                android:layout_marginTop="@dimen/marginNormal"
+                android:layout_width="wrap_content"
+                android:text="@string/humidity"
+                android:id="@+id/humidHeader"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                app:layout_constraintStart_toEndOf="@+id/humidHeader"
+                app:layout_constraintTop_toBottomOf="@+id/windValue"
+                android:layout_marginTop="@dimen/marginNormal"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="@dimen/marginNormal"
+                android:id="@+id/humidValue"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"/>
+
+
+            <TextView
+                app:layout_constraintStart_toEndOf="@+id/guideline"
+                app:layout_constraintTop_toBottomOf="@+id/humidHeader"
+                android:layout_marginTop="@dimen/marginNormal"
+                android:layout_width="wrap_content"
+                android:text="@string/precip"
+                android:id="@+id/precipHeader"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                app:layout_constraintStart_toEndOf="@+id/precipHeader"
+                app:layout_constraintTop_toBottomOf="@+id/humidValue"
+                android:layout_marginTop="@dimen/marginNormal"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="@dimen/marginNormal"
+                android:id="@+id/precipValue"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"/>
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.60" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+    <androidx.cardview.widget.CardView
+        app:layout_constraintTop_toBottomOf="@+id/weatherCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/marginNormal"
+        android:layout_margin="@dimen/marginNormal"
+        app:cardElevation="0dp"
+        android:id="@+id/diseasesLab">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:id="@+id/diseaseImage"
+                android:src="@drawable/ic_pest"
+                android:scaleType="fitXY"
+                android:background="@drawable/image_gradient"
+                android:contentDescription="@string/app_name"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"/>
+
+            <TextView
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:id="@+id/diseaseName"
+                android:text="@string/labs"
+                android:fontFamily="sans-serif-black"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textTitle"
+                android:textAllCaps="true"
+                android:padding="@dimen/marginNormal"
+                android:layout_margin="@dimen/marginSmall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
+
+            <TextView
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:id="@+id/disc"
+                android:maxLines="3"
+                android:text="@string/lab_desc"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:padding="@dimen/marginNormal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

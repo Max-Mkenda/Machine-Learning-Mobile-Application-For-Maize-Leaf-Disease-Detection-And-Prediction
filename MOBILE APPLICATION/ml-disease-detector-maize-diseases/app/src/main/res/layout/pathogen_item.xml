@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:id="@+id/pathogenCard"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/marginSmall"
+
+        app:cardCornerRadius="@dimen/marginNormal"
+        android:elevation="0dp"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:id="@+id/pathogenImage"
+                android:src="@drawable/ic_pest"
+                android:scaleType="fitXY"
+                android:contentDescription="@string/app_name"
+                android:layout_width="@dimen/imageWidth"
+                android:layout_height="@dimen/imageWidth"/>
+
+            <TextView
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="@dimen/marginNormal"
+                android:text="@string/pathogen"
+                android:id="@+id/pathogen"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textTitle"
+                android:layout_marginTop="@dimen/marginNormal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</layout>

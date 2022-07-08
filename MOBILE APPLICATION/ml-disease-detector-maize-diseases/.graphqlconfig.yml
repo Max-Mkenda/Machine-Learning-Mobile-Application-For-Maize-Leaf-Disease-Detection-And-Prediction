@@ -1,0 +1,18 @@
+projects:
+  serverless-inference-api-graphql-api:
+    schemaPath: app/src/main/graphql/schema.json
+    includes:
+      - app/src/main/graphql/**/*.graphql
+    excludes:
+      - ./amplify/**
+    extensions:
+      amplify:
+        codeGenTarget: ''
+        generatedFileName: ''
+        docsFilePath: app/src/main/graphql/com/amazonaws/amplify/generated/graphql
+        region: eu-west-1
+        apiId: cls5ghov3vewnmy5qxcn7s6t4m
+        maxDepth: 7
+extensions:
+  amplify:
+    version: 3

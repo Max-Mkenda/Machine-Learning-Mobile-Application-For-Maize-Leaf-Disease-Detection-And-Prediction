@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/backgroundColor"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/backArrow"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/rounded_outline_button"
+        android:contentDescription="@string/camera_capture"
+        android:elevation="@dimen/marginNormal"
+        android:padding="8dp"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:src="@drawable/ic_left_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/white"/>
+
+    <com.jpegkit.JpegImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:alpha="1.0"
+        android:id="@+id/capturedImage"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/guideline" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.4" />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/marginNormal"
+        android:id="@+id/titleHolder"
+        app:layout_constraintTop_toBottomOf="@id/guideline"
+        android:orientation="vertical">
+
+        <TextView
+            android:textSize="@dimen/header"
+            android:id="@+id/predictionTitle"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/prediction_results"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/predictionDescription"
+            android:textStyle="normal"
+            android:textAlignment="center"
+            android:fontFamily="sans-serif"
+            android:text="@string/predict_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        app:layout_constraintTop_toBottomOf="@+id/titleHolder"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="@dimen/marginNormal"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:id="@+id/inferenceResults"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <TextView
+            android:id="@+id/predictionResults"
+            android:layout_width="match_parent"
+            android:layout_margin="@dimen/marginNormal"
+            android:textSize="@dimen/textTitle"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/rotten_message"
+            android:layout_height="wrap_content"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/inferenceHolder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.ramijemli.percentagechartview.PercentageChartView
+                android:id="@+id/predictionConfidence"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="24dp"
+                app:layout_constraintDimensionRatio="2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:pcv_mode="ring"
+                app:pcv_drawBackgroundBar="false"
+                app:pcv_progress="90"
+
+                app:pcv_textColor="@color/black"
+                app:pcv_backgroundColor="@color/white"
+                app:pcv_progressColor="@color/redSecondary"
+                app:pcv_startAngle="180"
+                app:pcv_textSize="50sp" />
+
+            <TextView
+                android:id="@+id/hint"
+                app:layout_constraintTop_toBottomOf="@+id/predictionConfidence"
+                android:layout_width="match_parent"
+                android:layout_margin="@dimen/marginNormal"
+                android:textSize="@dimen/textNormal"
+                android:textColor="@color/black"
+                android:visibility="gone"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/hint"
+                android:layout_height="wrap_content"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_margin="@dimen/marginNormal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:background="@drawable/red_roundend"
+        android:id="@+id/inferenceMeasures"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginNormal"
+            android:clickable="false"
+            android:textColor="@color/white"
+            android:text="@string/measures" />
+        <ImageView
+            android:layout_marginEnd="@dimen/marginNormal"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:clickable="false"
+            app:tint="@color/white"
+
+            android:src="@drawable/ic_next"
+            android:contentDescription="@string/app_name" />
+    </LinearLayout>
+    <com.airbnb.lottie.LottieAnimationView
+        app:layout_constraintTop_toBottomOf="@+id/guideline"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="@dimen/marginNormal"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/plant"
+        app:lottie_repeatMode="reverse"
+        android:id="@+id/loader"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

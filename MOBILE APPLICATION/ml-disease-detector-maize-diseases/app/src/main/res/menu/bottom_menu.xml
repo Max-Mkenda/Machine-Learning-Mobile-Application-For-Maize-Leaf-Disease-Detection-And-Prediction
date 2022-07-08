@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        app:cnb_backgroundColor="@color/white"
+        app:cnb_iconColor="@color/redSecondary"
+        app:cnb_iconTintMode="src_in"
+        android:enabled="true"
+        app:cnb_textColor="@color/redSecondary"
+        android:id="@+id/home"
+        android:title="@string/home"
+        android:icon="@drawable/ic_home"/>
+
+    <item
+        app:cnb_backgroundColor="@color/white"
+        app:cnb_iconColor="@color/redSecondary"
+        app:cnb_iconTintMode="src_in"
+        app:cnb_textColor="@color/redSecondary"
+        android:id="@+id/diagnose"
+        android:title="@string/diagnose"
+        android:icon="@drawable/ic_pest"/>
+
+<!--    <item-->
+<!--        app:cnb_backgroundColor="@color/white"-->
+<!--        app:cnb_iconColor="@color/redSecondary"-->
+<!--        app:cnb_iconTintMode="src_in"-->
+<!--        android:enabled="true"-->
+<!--        app:cnb_textColor="@color/redSecondary"-->
+<!--        android:id="@+id/more"-->
+<!--        android:title="@string/more_details"-->
+<!--        android:icon="@drawable/ic_more"/>-->
+</menu>

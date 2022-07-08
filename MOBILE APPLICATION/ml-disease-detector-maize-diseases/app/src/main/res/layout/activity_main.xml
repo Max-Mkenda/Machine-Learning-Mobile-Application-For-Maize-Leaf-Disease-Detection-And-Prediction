@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/backgroundColor"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="activities.MainActivity">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/menuViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomBar"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+
+    <ImageView
+        android:src="@drawable/ic_camera_alt_svgrepo_com"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/capture"
+
+        android:layout_width="48dp"
+        android:padding="8dp"
+        android:elevation="@dimen/marginNormal"
+        app:tint="@color/white"
+        android:background="@drawable/red_roundend"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="64dp"
+        android:layout_height="48dp"
+        android:contentDescription="@string/camera_capture" />
+
+    <com.ismaeldivita.chipnavigation.ChipNavigationBar
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbarHeight"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:cnb_menuResource="@menu/bottom_menu"
+        app:cnb_orientationMode="horizontal"
+        app:cnb_addBottomInset="true"
+        app:cnb_addLeftInset="false"
+        app:cnb_addRightInset="false"
+        app:cnb_addTopInset="true"
+        app:cnb_unselectedColor="@color/black"
+        app:cnb_badgeColor="@color/redSecondary"
+        app:cnb_radius="@dimen/marginNormal"
+        app:cnb_iconSize="@dimen/iconNormal"
+        app:cnb_textAppearance="@style/BottomNavigationStyle"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
